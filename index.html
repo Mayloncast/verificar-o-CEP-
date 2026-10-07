@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frete Fácil</title>
+   
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>📍 Frete Fácil</h1>
+    <p style="color: white;">Calcule seu frete pelo CEP</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Calcular entrega</h2>
+      <p>
+        Informe o CEP de destino para consultar o endereço
+        e estimar o valor do frete.
+      </p>
+
+      <label for="cep">CEP de destino</label>
+      <input
+        type="text"
+        id="cep"
+        placeholder="Ex.: 60740-020"
+        maxlength="9"
+      >
+
+      <button id="consultar" onclick="calcularFrete()">
+        Consultar CEP e calcular
+      </button>
+
+      <p id="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Origem da entrega</h2>
+      <p><strong>UNINASSAU — Parangaba</strong></p>
+      <p>Rua Germano Franck, 613</p>
+      <p>Fortaleza - CE, CEP 60740-020</p>
+    </section>
+
+    <section class="card" id="resultado">
+      <h2>Resultado da consulta</h2>
+
+      <p id="endereco"></p>
+
+      <div class="valor">
+        Distância aproximada por estrada
+        <strong id="distancia">-- km</strong>
+      </div>
+
+      <div class="valor">
+        Frete estimado
+        <strong id="preco">R$ 0,00</strong>
+      </div>
+
+      <p class="aviso">
+        O valor é uma simulação para fins acadêmicos.
+      </p>
+
+      <button onclick="abrirUber()">
+        Consultar no Uber
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    Projeto • Frete Fácil
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
